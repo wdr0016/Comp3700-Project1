@@ -73,6 +73,23 @@ public class SQLiteDataAdapter implements IDataAdapter {
         return PRODUCT_SAVED_OK;
     }
 
+    public int saveCustomer(CustomerModel customer) {
+        try {
+            String sql = "INSERT INTO Customers(CustomerId, Name, Address, Phone) VALUES " + customer;
+            System.out.println(sql);
+            Statement stmt = conn.createStatement();
+            stmt.executeUpdate(sql);
+
+        } catch (Exception e) {
+            String msg = e.getMessage();
+            System.out.println(msg);
+            if (msg.contains("UNIQUE constraint failed"))
+                return CUSTOMER_DUPLICATE_ERROR;
+        }
+
+        return CUSTOMER_SAVED_OK;
+    }
+
     public int savePurchase(PurchaseModel purchase) {
         try {
             String sql = "INSERT INTO Purchases VALUES " + purchase;

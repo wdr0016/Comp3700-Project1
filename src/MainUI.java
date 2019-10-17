@@ -38,6 +38,14 @@ public class MainUI {
             }
         });
 
+        btnAddProduct.addActionListener(new ActionListener() {
+
+            public void actionPerformed(ActionEvent actionEvent) {
+                AddCustomerUI ac = new AddCustomerUI();
+                ac.run();
+            }
+        });
+
         btnAddPurchase.addActionListener(new ActionListener() {
 
             public void actionPerformed(ActionEvent actionEvent) {
