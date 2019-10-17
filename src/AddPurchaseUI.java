@@ -108,7 +108,7 @@ public class AddPurchaseUI {
                 return;
             }
 
-            System.out.println("ProductID = " + s);
+            //System.out.println("ProductID = " + s);
 
             try {
                 purchase.mProductID = Integer.parseInt(s);
@@ -156,7 +156,7 @@ public class AddPurchaseUI {
                 return;
             }
 
-            System.out.println("CustomerID = " + s);
+            //System.out.println("CustomerID = " + s);
 
             try {
                 purchase.mCustomerID = Integer.parseInt(s);
@@ -206,7 +206,7 @@ public class AddPurchaseUI {
                 return;
             }
 
-            System.out.println("Quantity = " + s);
+            //System.out.println("Quantity = " + s);
 
             try {
                 purchase.mQuantity = Double.parseDouble(s);
@@ -269,7 +269,7 @@ public class AddPurchaseUI {
                     JOptionPane.showMessageDialog(null, "Purchase added successfully!" + purchase);
                     TXTReceiptBuilder receipt = new TXTReceiptBuilder();
                     receipt.appendAll("Will's Store Receipt", customer, product, purchase, "Have a nice day!");
-                    System.out.println(receipt.toString());
+                    //System.out.println(receipt.toString());
             }
         }
     }
