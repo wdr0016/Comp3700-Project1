@@ -38,7 +38,7 @@ public class MainUI {
             }
         });
 
-        btnAddProduct.addActionListener(new ActionListener() {
+        btnAddCustomer.addActionListener(new ActionListener() {
 
             public void actionPerformed(ActionEvent actionEvent) {
                 AddCustomerUI ac = new AddCustomerUI();

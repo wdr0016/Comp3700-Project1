@@ -12,7 +12,7 @@ public class AddCustomerUI {
 
     public JTextField txtCustomerID = new JTextField(20);
     public JTextField txtName = new JTextField(20);
-    public JTextField txtBalance = new JTextField(20);
+    public JTextField txtAddress = new JTextField(20);
     public JTextField txtPhone = new JTextField(20);
 
 
@@ -39,7 +39,7 @@ public class AddCustomerUI {
 
         JPanel line3 = new JPanel(new FlowLayout());
         line3.add(new JLabel("Address "));
-        line3.add(txtBalance);
+        line3.add(txtAddress);
         view.getContentPane().add(line3);
 
         JPanel line4 = new JPanel(new FlowLayout());
@@ -93,7 +93,7 @@ public class AddCustomerUI {
 
             customer.mName = name;
 
-            String address = txtName.getText();
+            String address = txtAddress.getText();
             if (address.length() == 0) {
                 JOptionPane.showMessageDialog(null, "Address name cannot be empty!");
                 return;
@@ -101,7 +101,7 @@ public class AddCustomerUI {
 
             customer.mAddress = address;
 
-            String phone = txtName.getText();
+            String phone = txtPhone.getText();
             if (phone.length() == 0) {
                 JOptionPane.showMessageDialog(null, "Phone cannot be empty!");
                 return;
